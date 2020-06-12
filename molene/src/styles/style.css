@@ -13,9 +13,11 @@ body {
 .side-panel {
   width: 20vw;
   height: 100%;
-  position: absolute;
   margin-left: 0;
   margin-top: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
 }
 .menu {
   position: absolute;
@@ -157,18 +159,61 @@ body {
 
 .introduction-cover-wrapper {
   width: 80vw;
-  height: calc(100% - 8.1rem - 18.25%);
+  height: auto;
   position: absolute;
   right: 0;
   margin-top: 8.1rem;
 }
 
-.introduction-cover-wrapper .picture {
+.picture {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top center;
   max-height: 60vh;
+}
+
+.scroll {
+  font-size: 0.8em;
+  font-weight: bold;
+  left: calc((100% / 40) * 9.5);
+  position: absolute;
+  bottom: 0;
+  line-height: 1.5;
+}
+.scroll:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: calc(100% + 2vh);
+  left: 50%;
+  width: 0;
+  height: 8vh;
+  border: 1px dashed #181818;
+  opacity: 1;
+  transition: transform 0.9s cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 0.9s cubic-bezier(0.215, 0.61, 0.355, 1),
+    -webkit-transform 0.9s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-delay: 0.8s;
+}
+
+.image-with-text {
+  left: 20vw;
+  width: 80vw;
+  height: auto;
+  right: 0;
+  margin-top: 8.1rem;
+}
+
+/* General */
+
+.paragraph {
+  margin-left: 20vw;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  width: 40%;
+  padding-bottom: 1em;
 }
 
 @media only screen and (min-width: 769px) {
@@ -190,5 +235,12 @@ body {
     max-width: 80vw;
     margin-left: 10%;
     font-size: 5em;
+  }
+  .paragraph {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    width: 90%;
+    margin-right: 3.175rem;
   }
 }
