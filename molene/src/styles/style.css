@@ -11,7 +11,7 @@ body {
 
 /* Side Panel */
 .side-panel {
-  width: 10vw;
+  width: 20vw;
   height: 100%;
   position: absolute;
   margin-left: 0;
@@ -20,7 +20,7 @@ body {
 .menu {
   position: absolute;
   margin-top: 50px;
-  left: 50%;
+  left: calc(10vw - 50px);
 }
 .menu:before {
   content: "";
@@ -81,6 +81,58 @@ body {
   width: 15px;
 }
 
+.menu-text {
+  font-size: 0.8em;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 0.03em;
+  transform: rotate(-90deg) translate(-230px, -36px);
+  white-space: nowrap;
+  text-align: right;
+  color: #d95244;
+}
+
+.header-socials {
+  top: 40%;
+  left: 5vw;
+  padding: 1em 1em;
+  bottom: initial;
+  right: initial;
+  position: absolute;
+}
+.header-socials li {
+  padding-top: 8px;
+  list-style: none;
+  transform: rotate(-90deg);
+}
+
+.header-socials a {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 0.8em;
+  color: black;
+  text-decoration: none;
+}
+
+.header-socials a:hover {
+  font-weight: bold;
+  font-size: 0.8em;
+  color: #d95244;
+  text-decoration: none;
+}
+
+.logo {
+  padding: 1em 1em;
+  top: 80%;
+  left: 5vw;
+  width: 1em;
+  height: 3em;
+  display: block;
+  position: absolute;
+}
+
+/* Intro */
+
 .introduction {
   width: 100%;
 }
@@ -93,7 +145,7 @@ body {
   height: auto;
   /* overlap the text with image */
   transform: translate(0, -24%);
-  margin-left: 22.5%;
+  margin-left: calc(20vw + 2.5%);
   position: absolute;
   color: #181818;
   font-style: normal;
@@ -104,7 +156,7 @@ body {
 }
 
 .introduction-cover-wrapper {
-  width: calc(50vw + (89% / 2) - (89% / 40 * 4));
+  width: 80vw;
   height: calc(100% - 8.1rem - 18.25%);
   position: absolute;
   right: 0;
@@ -116,6 +168,7 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: top center;
+  max-height: 60vh;
 }
 
 @media only screen and (min-width: 769px) {
