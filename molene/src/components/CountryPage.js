@@ -13,7 +13,7 @@ const ImagesForThreeImagesInRowGallery=["http://d1v0ujotwdj8lp.cloudfront.net/wp
 export const CountryPage = () => {
   return (
     <div className='country-page'>
-      <Introduction/>
+      <Introduction titleSize={"large"}/>
       <ImageWithText />
       <FullbleedImageWithText/>
       <Gallery/>

@@ -2,11 +2,11 @@ import React from "react";
 import { COUNTRY_INFO } from "../constants/text";
 import Title from "./Title";
 
-export const Introduction = () => {
+export const Introduction = ({ titleSize } = "large") => {
   return (
     <div className='introduction'>
       <div className='introduction-head'>
-        <Title title={COUNTRY_INFO.title} />
+        <Title titleSize={titleSize} title={COUNTRY_INFO.title} />
         <div className='introduction-cover-wrapper'>
           <img
             alt=''

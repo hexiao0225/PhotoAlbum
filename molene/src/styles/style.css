@@ -1,3 +1,41 @@
+@font-face {
+  font-family: "DINPro Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("DINPro Light"),
+    url("../fonts/DINPro-Light\ tr.woff") format("woff");
+}
+
+@font-face {
+  font-family: "DINPro Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("DINPro Medium"),
+    url("../fonts//DINPro-Medium\ tr.woff") format("woff");
+}
+
+@font-face {
+  font-family: "DINPro Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("DINPro Bold"), url("../fonts/DINPro-Bold\ tr.woff") format("woff");
+}
+
+@font-face {
+  font-family: "DINPro Black";
+  font-style: normal;
+  font-weight: normal;
+  src: local("DINPro Black"),
+    url("../fonts/DINPro-Bold\ tr.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PortraitScript Regular";
+  /* src: url('../fonts/Portrait-script-regular.ttf');  */
+  src: local("PortraitScript Regular"),
+    url("../fonts/Portrait-script-regular.ttf") format("opentype");
+}
+
 html {
   font-family: "Lato", sans-serif;
   background: #f1f0eb;
@@ -158,6 +196,20 @@ body {
   z-index: 1;
 }
 
+.small-introduction-title {
+  height: auto;
+  /* overlap the text with image */
+  transform: translate(0, -24%);
+  margin-left: calc(20vw + 2.5%);
+  position: absolute;
+  color: #181818;
+  font-style: normal;
+  font-size: 8rem;
+  font-weight: 700;
+  letter-spacing: -0.08em;
+  z-index: 1;
+}
+
 .introduction-cover-wrapper {
   width: 80vw;
   height: auto;
@@ -214,30 +266,30 @@ body {
 /* General */
 
 .paragraph {
+  font-family: "DINPro Light", sans-serif;
   margin-left: 20vw;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 12px;
-  line-height: 1.5;
-  width: 40%;
-  padding-bottom: 1em;
+  width: 31vw;
+  line-height: 19px;
 }
 
 .picture {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
   max-height: 60vh;
   padding-bottom: 3vh;
 }
 
 .script-title {
   padding-left: 20vw;
-  font-family: "Pinyon Script", cursive;
+  font-family: "PortraitScript Regular", cursive;
   color: #d95244;
-  letter-spacing: 0.1em;
-  font-size: 2em;
-  transform: translateY(-11vh);
+  /* letter-spacing: 0.1em; */
+  font-weight: 300;
+  font-size: 3em;
+  transform: translateY(-15vh);
 }
 
 .fullbleed-image-with-text .picture {
