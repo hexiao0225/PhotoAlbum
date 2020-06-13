@@ -1,11 +1,23 @@
 import React from "react";
 import Introduction from './Introduction'
 import ImageWithText from './ImageWithText'
+import FullbleedImageWithText from './FullbleedImageWithText'
+import Gallery from './Gallery'
+import ThreeImagesInRowGallery from './ThreeImagesInRowGallery'
+
+const ImagesForThreeImagesInRowGallery=["http://d1v0ujotwdj8lp.cloudfront.net/wp-content/uploads/2019/05/24130715/Se%CC%81quence-1.png",
+"http://d1v0ujotwdj8lp.cloudfront.net/wp-content/uploads/2019/05/24130719/Se%CC%81quence-10.png",
+"http://d1v0ujotwdj8lp.cloudfront.net/wp-content/uploads/2019/05/24130723/Se%CC%81quence-31.png"]
+
+
 export const CountryPage = () => {
   return (
     <div className='country-page'>
       <Introduction/>
       <ImageWithText />
+      <FullbleedImageWithText/>
+      <Gallery/>
+      <ThreeImagesInRowGallery images={ImagesForThreeImagesInRowGallery}/>
     </div>
   );
 };
