@@ -203,7 +203,7 @@ body {
 .small-introduction-title {
   height: auto;
   /* overlap the text with image */
-  transform: translate(0, 60px);
+  transform: translate(0, 30px);
   margin-left: calc(20vw + 2.5%);
   position: absolute;
   color: #181818;
@@ -316,10 +316,11 @@ body {
   height: 100%;
   object-fit: cover;
   max-height: 60vh;
-  padding-bottom: 3vh;
 }
 
 .script-title {
+  height: 40px;
+  /* position: absolute; */
   padding-left: 20vw;
   font-family: "PortraitScript Regular", cursive;
   color: #d95244;
@@ -474,9 +475,9 @@ body {
 }
 
 .unfold-to-right {
-  -webkit-animation: unfold-to-right 1.4s cubic-bezier(0.215, 0.61, 0.355, 1)
+  -webkit-animation: unfold-to-right 2.5s cubic-bezier(0.215, 0.61, 0.355, 1)
     both;
-  animation: unfold-to-right 1.4s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: unfold-to-right 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
 .scale-down-center {

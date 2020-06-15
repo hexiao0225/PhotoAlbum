@@ -6,17 +6,17 @@ const Paragraph = ({ text, title }) => {
   const intersection = useIntersection(sectionRef, {
     root: null,
     rootMargin: "0px",
-    threshold: 0.5,
+    threshold: 0.2,
   });
-  const isSeen = !(intersection && intersection.intersectionRatio < 0.5);
+  const isSeen = !(intersection && intersection.intersectionRatio < 0.2);
   return (
     <div ref={sectionRef}>
-      <h3 className={isSeen ? "script-title slide-up" : "script-title"}>
+      <h3 className={isSeen ? "script-title fade-in" : "script-title fade-out"}>
         {title}
       </h3>
-      <div className={isSeen ? "paragraph fade-in" : "paragraph fade-out"}>
-        <p>{text}</p>
-      </div>
+      <p className={isSeen ? "paragraph fade-in" : "paragraph fade-out"}>
+        {text}
+      </p>
     </div>
   );
 };
