@@ -269,6 +269,12 @@ body {
 }
 
 /* General */
+.spacer {
+  content: "";
+  height: 20vh;
+  width: 100vw;
+  background: transparent;
+}
 .block-quote {
   padding-left: 20vw;
   width: 60vw;
