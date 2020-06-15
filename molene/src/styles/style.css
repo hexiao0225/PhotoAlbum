@@ -271,14 +271,14 @@ body {
 /* General */
 .block-quote {
   padding-left: 20vw;
-  width: 50vw;
+  width: 60vw;
   margin-left: 0;
 }
 .block-quote-sentence {
   text-align: center;
   font-family: "PortraitScript Regular", cursive;
   font-weight: 300;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 .block-quote-author {
   text-align: right;
@@ -450,12 +450,12 @@ body {
 }
 
 .slide-left {
-  -webkit-animation: slide-left 2s cubic-bezier(0.645, 0.045, 0.355, 1) both;
-  animation: slide-left 2s cubic-bezier(0.645, 0.045, 0.355, 1) both;
+  -webkit-animation: slide-left 1s cubic-bezier(0.645, 0.045, 0.355, 1) both;
+  animation: slide-left 1s cubic-bezier(0.645, 0.045, 0.355, 1) both;
 }
 .fade-in {
-  -webkit-animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 .fade-out {
   -webkit-animation: fade-out 1.5s ease-out both;
@@ -467,10 +467,10 @@ body {
   animation: fade-in-fwd 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
-.tracking-in-expand {
-  -webkit-animation: tracking-in-expand 1.4s cubic-bezier(0.215, 0.61, 0.355, 1)
+.unfold-to-right {
+  -webkit-animation: unfold-to-right 1.4s cubic-bezier(0.215, 0.61, 0.355, 1)
     both;
-  animation: tracking-in-expand 1.4s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: unfold-to-right 1.4s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
 .scale-down-center {
@@ -507,8 +507,8 @@ body {
 
 @-webkit-keyframes slide-left {
   0% {
-    -webkit-transform: translateX(600px);
-    transform: translateX(600px);
+    -webkit-transform: translateX(300px);
+    transform: translateX(300px);
   }
   100% {
     -webkit-transform: translateX(0);
@@ -517,8 +517,8 @@ body {
 }
 @keyframes slide-left {
   0% {
-    -webkit-transform: translateX(600px);
-    transform: translateX(600px);
+    -webkit-transform: translateX(300px);
+    transform: translateX(300px);
   }
   100% {
     -webkit-transform: translateX(0);
@@ -568,7 +568,7 @@ body {
   }
 }
 
-@-webkit-keyframes tracking-in-expand {
+@-webkit-keyframes unfold-to-right {
   0% {
     letter-spacing: -0.5em;
     opacity: 0;
@@ -580,7 +580,7 @@ body {
     opacity: 1;
   }
 }
-@keyframes tracking-in-expand {
+@keyframes unfold-to-right {
   0% {
     letter-spacing: -0.5em;
     opacity: 0;

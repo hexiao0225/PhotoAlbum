@@ -1,7 +1,5 @@
-import React, { useRef } from "react";
-import { useIntersection } from "react-use";
-
-// 8 images per gallery block
+import React from "react";
+import GalleryImage from "./GalleryImage";
 
 const imageUrls = [
   "http://d1v0ujotwdj8lp.cloudfront.net/wp-content/uploads/2019/05/24124922/Se%CC%81quence-6-min.png",
@@ -16,33 +14,21 @@ const landscapeUrls = [
   "http://d1v0ujotwdj8lp.cloudfront.net/wp-content/uploads/2019/05/24125752/Se%CC%81quence-89-min-603x256.png",
   "http://d1v0ujotwdj8lp.cloudfront.net/wp-content/uploads/2019/05/24125716/Se%CC%81quence-56-min-603x256.png",
 ];
-const Gallery = () => {
-  const sectionRef = useRef(null);
-  const intersection = useIntersection(sectionRef, {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.5,
-  });
-
-  const isSeen = !(intersection && intersection.intersectionRatio < 0.5);
+const EightImagesGallery = () => {
   return (
-    <div ref={sectionRef} className='gallery'>
+    <div className='gallery'>
       <ul className='gallery-landscape'>
         {landscapeUrls.map((url, index) => (
-          <li key={index} className='gallery-item scale-down-center'>
-            <img alt='' className='gallery-picture' src={url}></img>
-          </li>
+          <GalleryImage key={index} url={url}></GalleryImage>
         ))}
       </ul>
       <ul className='gallery-portrait'>
         {imageUrls.map((url, index) => (
-          <li key={index} className='gallery-item scale-down-center'>
-            <img alt='' className='gallery-picture' src={url}></img>
-          </li>
+          <GalleryImage key={index} url={url}></GalleryImage>
         ))}
       </ul>
     </div>
   );
 };
 
-export default Gallery;
+export default EightImagesGallery;

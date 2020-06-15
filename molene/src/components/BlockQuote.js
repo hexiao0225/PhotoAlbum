@@ -1,6 +1,6 @@
 import React from "react";
 
-const BlockQuote = () => {
+const BlockQuote = ({ quote, author }) => {
   return (
     <div className='block-quote'>
       <p className='block-quote-sentence'>

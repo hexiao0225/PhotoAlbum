@@ -2,7 +2,7 @@ import React from "react";
 import Introduction from "./Introduction";
 import ImageWithText from "./ImageWithText";
 import FullbleedImageWithText from "./FullbleedImageWithText";
-import Gallery from "./Gallery";
+import EightImagesGallery from "./EightImagesGallery";
 import ThreeImagesInRowGallery from "./ThreeImagesInRowGallery";
 import BlockQuote from "./BlockQuote";
 const ImagesForThreeImagesInRowGallery = [
@@ -17,10 +17,11 @@ export const CountryPage = () => {
       <Introduction titleSize={"large"} title={"Algeria"} />
       <ImageWithText />
       <FullbleedImageWithText />
-      <Gallery />
+      <EightImagesGallery />
       <Introduction titleSize={"small"} title={"Amal Jodwani"} />
       <BlockQuote />
       <ThreeImagesInRowGallery images={ImagesForThreeImagesInRowGallery} />
+      <FullbleedImageWithText />
     </div>
   );
 };
