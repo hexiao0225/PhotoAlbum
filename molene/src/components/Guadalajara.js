@@ -6,6 +6,8 @@ import Introduction from "./Introduction";
 // import ThreeImagesInRowGallery from "./ThreeImagesInRowGallery";
 // import BlockQuote from "./BlockQuote";
 // import Spacer from "./Spacer";
+import GalleryImage from "./GalleryImage";
+
 import ScrollIndicator from "./ScrollIndicator";
 
 const Guadalajara = ({ content }) => {
@@ -14,6 +16,9 @@ const Guadalajara = ({ content }) => {
     <div className='country-page'>
       <Introduction titleSize={"large"} url={coverImage} title={title} />
       <ScrollIndicator />
+      {images.map((image) => (
+        <GalleryImage url={image} />
+      ))}
     </div>
   );
 };

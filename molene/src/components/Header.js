@@ -11,7 +11,6 @@ const Header = ({ history,content }) => {
     clicked: null,
     menuName: "menu"
   });
-console.log("content",content)
   const cities = content.map(city=>{
     return {name:city.title,value:city.title.toLowerCase().replace(' ',''),coverImage:city.coverImage}
   })
