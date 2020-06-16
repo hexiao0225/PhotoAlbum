@@ -231,19 +231,20 @@ header {
               padding: 0;
               li {
                 list-style: none;
-                font-size: 6rem;
-                font-weight: 700;
+                font-size: 4rem;
+                font-weight: 600;
                 cursor: pointer;
-                height: 135px;
+                height: 100px;
                 overflow: hidden;
                 position: relative;
-                width: 700px;
+                width: 60vw;
+
                 a {
                   position: absolute;
                   color: #fff;
                   text-decoration: none;
                   &:hover {
-                    color: #fff;
+                    color: $red;
                   }
                 }
               }

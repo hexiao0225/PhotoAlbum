@@ -23,11 +23,11 @@ const fullbleedImageSample1Url =
   "http://d1v0ujotwdj8lp.cloudfront.net/wp-content/uploads/2019/01/28233949/%C2%A9ALSAFAR-ALGERIA-001-IPAD-min-1440x820.jpg";
 
 const cities = [
-  { name: "Dallas", image: fullbleedImageSample1Url },
-  { name: "Austin", image: fullbleedImageSample1Url },
-  { name: "New York", image: fullbleedImageSample1Url },
-  { name: "San Francisco", image: fullbleedImageSample1Url },
-  { name: "Beijing", image: fullbleedImageSample1Url }
+  { name: "GuadalaJara", value:"guadalajara",image: fullbleedImageSample1Url },
+  { name: "Santa Fe", value:"santafe",image: fullbleedImageSample1Url },
+  { name: "New York", value:"newyork",image: fullbleedImageSample1Url },
+  { name: "San Francisco", value:"sanfrancisco",image: fullbleedImageSample1Url },
+  { name: "Dubai", value:"dubai",image: fullbleedImageSample1Url }
 ];
 
 
@@ -37,9 +37,9 @@ const Hamburger = ({ state }) => {
   let reveal1 = useRef(null);
   let reveal2 = useRef(null);
   let cityBackground = useRef(null);
-  let line1 = useRef(null);
-  let line2 = useRef(null);
-  let line3 = useRef(null);
+//   let line1 = useRef(null);
+//   let line2 = useRef(null);
+//   let line3 = useRef(null);
   let info = useRef(null);
 
   useEffect(() => {
@@ -64,7 +64,6 @@ const Hamburger = ({ state }) => {
       });
       staggerReveal(reveal1, reveal2);
       fadeInUp(info);
-      staggerText(line1, line2, line3);
     }
   }, [state]);
 
@@ -80,35 +79,21 @@ const Hamburger = ({ state }) => {
         <div className='container'>
           <div className='wrapper'>
             <div className='menu-links'>
-              <nav>
+              <nav >
                 <ul>
-                  <li>
+                {cities.map(el => (
+                    <li>
                     <Link
-                      onMouseEnter={e => handleHover(e)}
-                      onMouseOut={e => handleHoverExit(e)}
-                      ref={el => (line1 = el)}
-                      to='/algeria'>
-                      Algeria
+                      to={`${el.value}`}>
+                   <span
+                    key={el.name}
+                    onMouseEnter={() => handleCity(el.image, cityBackground)}
+                    onMouseOut={() => handleCityReturn(cityBackground)}>
+                    {el.name}
+                  </span>
                     </Link>
                   </li>
-                  <li>
-                    <Link
-                      onMouseEnter={e => handleHover(e)}
-                      onMouseOut={e => handleHoverExit(e)}
-                      ref={el => (line2 = el)}
-                      to='/guadalajara'>
-                      Guadalajara
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      onMouseEnter={e => handleHover(e)}
-                      onMouseOut={e => handleHoverExit(e)}
-                      ref={el => (line3 = el)}
-                      to='/santafe'>
-                      Santa Fe
-                    </Link>
-                  </li>
+                ))}
                 </ul>
               </nav>
               <div ref={el => (info = el)} className='info'>
@@ -117,17 +102,7 @@ const Hamburger = ({ state }) => {
                   An wanderer, a traveler, a rootless passenger. Walking, sitting, moving.
                 </p>
               </div>
-              <div className='locations'>
-                Locations:
-                {cities.map(el => (
-                  <span
-                    key={el.name}
-                    onMouseEnter={() => handleCity(el.image, cityBackground)}
-                    onMouseOut={() => handleCityReturn(cityBackground)}>
-                    {el.name}
-                  </span>
-                ))}
-              </div>
+
             </div>
           </div>
         </div>
