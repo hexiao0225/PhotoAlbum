@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useIntersection } from "react-use";
-
+import GalleryImage from "./GalleryImage";
 const ThreeImagesInRowGallery = ({ images } = {}) => {
   const sectionRef = useRef(null);
   const intersection = useIntersection(sectionRef, {
@@ -17,7 +17,7 @@ const ThreeImagesInRowGallery = ({ images } = {}) => {
         {images.map((url) => (
           <li>
             <img
-              className={isSeen ? "picture scale-down-center" : "picture"}
+              className={isSeen ? "portrait-picture scale-down-center" : "portrait-picture"}
               alt=''
               src={url}
             ></img>
