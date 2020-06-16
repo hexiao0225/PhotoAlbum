@@ -6,6 +6,7 @@ import EightImagesGallery from "./EightImagesGallery";
 import ThreeImagesInRowGallery from "./ThreeImagesInRowGallery";
 import BlockQuote from "./BlockQuote";
 import Spacer from "./Spacer";
+import ScrollIndicator from "./ScrollIndicator";
 const portraitUrls = [
   "http://d1v0ujotwdj8lp.cloudfront.net/wp-content/uploads/2019/05/24124922/Se%CC%81quence-6-min.png",
   "http://d1v0ujotwdj8lp.cloudfront.net/wp-content/uploads/2019/05/24125048/Se%CC%81quence-7-min.png",
@@ -53,6 +54,7 @@ export const CountryPage = () => {
         titleSize={"large"}
         title={"Algeria"}
       />
+      <ScrollIndicator />
       <ImageWithText text={sampleText} url={ImageWithTextUrl} />
       <FullbleedImageWithText
         url={fullbleedImageSample1Url}
@@ -72,6 +74,7 @@ export const CountryPage = () => {
       <ThreeImagesInRowGallery images={ImagesForThreeImagesInRowGallery} />
       <Spacer />
       <FullbleedImageWithText url={fullbleedImageSample2Url} />
+      <BlockQuote author={sampleAuthor} quote={sampleQuote} />
       <Spacer />
     </div>
   );

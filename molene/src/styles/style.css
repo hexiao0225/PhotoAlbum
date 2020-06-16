@@ -231,13 +231,10 @@ body {
   line-height: 1.5;
   transform: translateY(-60px);
 }
-
-.scroll-down-icon {
-  width: 7px;
-  height: 32px;
-  transform: rotateY(90);
-  bottom: 0;
+.hide-scroll {
+  opacity: 0;
 }
+
 .scroll:after {
   content: "";
   position: absolute;
