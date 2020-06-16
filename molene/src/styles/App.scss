@@ -82,7 +82,7 @@ body {
   span {
     height: 1px;
     margin-bottom: 3px;
-    background: black;
+    background: $black;
     display: block;
 
     &:first-child {
@@ -98,12 +98,13 @@ body {
 }
 
 .menu-close-icon {
-  transition-delay: 3s;
+  transition-duration: 3s;
   margin-top: 10px;
   span {
     height: 1px;
     background: white;
     display: block;
+
     &:first-child {
       width: 30px;
       transform: rotate(-45deg);
@@ -144,7 +145,7 @@ body {
   font-weight: bold;
   font-style: italic;
   font-size: 0.8em;
-  color: black;
+  color: $black;
   text-decoration: none;
 }
 
@@ -254,12 +255,17 @@ header {
             color: #fff;
             width: 300px;
             h3 {
-              font-size: 1.2rem;
+              font-family: "PortraitScript Regular", cursive;
+              color: #d95244;
+              font-weight: 300;
+              font-size: 2em;
               margin: 8px auto;
             }
             p {
-              margin: 0 auto;
-              font-size: 0.8rem;
+              margin-bottom: 1em;
+              font-family: "DINPro Light", sans-serif;
+              font-weight: 300;
+              font-size: 0.8em;
             }
           }
         }

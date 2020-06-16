@@ -16,9 +16,11 @@ const App = () => {
             <div className='home'>
               <Switch>
                 <Route exact path='/' component={CountryPage} />
-                <Route exact path='/algeria' component={CountryPage} />
+                <Route exact path='/newyork' component={CountryPage} />
                 <Route exact path='/guadalajara' component={Guadalajara} />
                 <Route exact path='/santafe' component={Guadalajara} />
+                <Route exact path='/sanfrancisco' component={Guadalajara} />
+                <Route exact path='/dubai' component={Guadalajara} />
               </Switch>
             </div>
           </div>

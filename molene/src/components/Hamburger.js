@@ -101,6 +101,7 @@ const Hamburger = ({ state }) => {
                 <p>
                   An wanderer, a traveler, a rootless passenger. Walking, sitting, moving.
                 </p>
+                <p>hexiao0225@gmail.com</p>
               </div>
 
             </div>
