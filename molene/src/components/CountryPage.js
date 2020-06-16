@@ -7,6 +7,7 @@ import ThreeImagesInRowGallery from "./ThreeImagesInRowGallery";
 import BlockQuote from "./BlockQuote";
 import Spacer from "./Spacer";
 import ScrollIndicator from "./ScrollIndicator";
+
 const portraitUrls = [
   "http://d1v0ujotwdj8lp.cloudfront.net/wp-content/uploads/2019/05/24124922/Se%CC%81quence-6-min.png",
   "http://d1v0ujotwdj8lp.cloudfront.net/wp-content/uploads/2019/05/24125048/Se%CC%81quence-7-min.png",
@@ -46,7 +47,8 @@ const introImageUrl1 =
   "http://d1v0ujotwdj8lp.cloudfront.net/wp-content/uploads/2019/02/28133056/oh_gawa-algerie-image1-1440x610.png";
 const introImageUrl2 =
   "http://d1v0ujotwdj8lp.cloudfront.net/wp-content/uploads/2019/05/24130857/oh_amal_image9-1440x606.png";
-export const CountryPage = () => {
+
+  export const CountryPage = () => {
   return (
     <div className='country-page'>
       <Introduction
