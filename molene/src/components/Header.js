@@ -4,13 +4,18 @@ import Hamburger from "./Hamburger";
 import SocialMedia from "./SocialMedia";
 import Logo from "./Logo";
 
-const Header = ({ history }) => {
+const Header = ({ history,content }) => {
   // State of our Menu
   const [state, setState] = useState({
     initial: false,
     clicked: null,
     menuName: "menu"
   });
+console.log("content",content)
+  const cities = content.map(city=>{
+    return {name:city.title,value:city.title.toLowerCase().replace(' ',''),coverImage:city.coverImage}
+  })
+
   // State of our button
   const [disabled, setDisabled] = useState(false);
 
@@ -74,7 +79,7 @@ const Header = ({ history }) => {
           </div>
         </div>
       </div>
-      <Hamburger state={state} />
+      <Hamburger cities={cities} state={state} />
       
     </header>
   );

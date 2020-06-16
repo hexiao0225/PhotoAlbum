@@ -22,31 +22,25 @@ import beijing from "../images/austin.webp";
 const fullbleedImageSample1Url =
   "http://d1v0ujotwdj8lp.cloudfront.net/wp-content/uploads/2019/01/28233949/%C2%A9ALSAFAR-ALGERIA-001-IPAD-min-1440x820.jpg";
 
-const cities = [
-  { name: "GuadalaJara", value:"guadalajara",image: fullbleedImageSample1Url },
-  { name: "Santa Fe", value:"santafe",image: fullbleedImageSample1Url },
-  { name: "New York", value:"newyork",image: fullbleedImageSample1Url },
-  { name: "San Francisco", value:"sanfrancisco",image: fullbleedImageSample1Url },
-  { name: "Dubai", value:"dubai",image: fullbleedImageSample1Url }
-];
+// const cities = [
+//   { name: "GuadalaJara", value:"guadalajara",image: fullbleedImageSample1Url },
+//   { name: "Santa Fe", value:"santafe",image: fullbleedImageSample1Url },
+//   { name: "New York", value:"newyork",image: fullbleedImageSample1Url },
+//   { name: "San Francisco", value:"sanfrancisco",image: fullbleedImageSample1Url },
+//   { name: "Dubai", value:"dubai",image: fullbleedImageSample1Url }
+// ];
 
 
-const Hamburger = ({ state }) => {
-  // Create varibles of our dom nodes
+const Hamburger = ({ state,cities }) => {
   let menuLayer = useRef(null);
   let reveal1 = useRef(null);
   let reveal2 = useRef(null);
   let cityBackground = useRef(null);
-//   let line1 = useRef(null);
-//   let line2 = useRef(null);
-//   let line3 = useRef(null);
   let info = useRef(null);
 
   useEffect(() => {
-    // If the menu is open and we click the menu button to close it.
     if (state.clicked === false) {
       // If menu is closed and we want to open it.
-
       staggerRevealClose(reveal2, reveal1);
       // Set menu to display none
       gsap.to(menuLayer, { duration: 1, css: { display: "none" } });
@@ -87,7 +81,7 @@ const Hamburger = ({ state }) => {
                       to={`${el.value}`}>
                    <span
                     key={el.name}
-                    onMouseEnter={() => handleCity(el.image, cityBackground)}
+                    onMouseEnter={() => handleCity(el.coverImage, cityBackground)}
                     onMouseOut={() => handleCityReturn(cityBackground)}>
                     {el.name}
                   </span>
