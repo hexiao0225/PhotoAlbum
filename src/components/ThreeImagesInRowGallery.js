@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { useIntersection } from "react-use";
-import GalleryImage from "./GalleryImage";
 const ThreeImagesInRowGallery = ({ images } = {}) => {
   const sectionRef = useRef(null);
   const intersection = useIntersection(sectionRef, {

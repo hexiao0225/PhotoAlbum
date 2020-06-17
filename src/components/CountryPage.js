@@ -59,7 +59,7 @@ const introImageUrl2 =
       <ScrollIndicator />
       <ImageWithText text={sampleText} image={ImageWithTextUrl} />
       <FullbleedImageWithText
-        url={fullbleedImageSample1Url}
+        image={fullbleedImageSample1Url}
         text={sampleText}
         title={fullbleedTitle}
       />

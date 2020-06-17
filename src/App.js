@@ -73,7 +73,7 @@ const App = () => {
       });
   };
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className='App'>
         {state.loaded && <Header content={state.content} />}
         <div className='container'>
