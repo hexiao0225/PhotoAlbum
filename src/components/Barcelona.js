@@ -6,8 +6,8 @@ import EightImagesGallery from "./EightImagesGallery";
 import ThreeImagesInRowGallery from "./ThreeImagesInRowGallery";
 import BlockQuote from "./BlockQuote";
 import Spacer from "./Spacer";
-import ScrollIndicator from "./ScrollIndicator";
 import Paragraph from "./Paragraph"
+import {parseText} from "../util/helper"
 
 const quote = "Life is short, life is dull, life is full of pain and this is the chance for something special."
 
@@ -16,21 +16,27 @@ const p1 = "My first encounter with the city comes from Woody Allen’s film Vic
 const todos = "I gave myself a touristy to-do list. \n Buy telephone card with data \n International charger adaptor \n Take a bus to Park Guell \n Go to Palace del Sol and find a coffee shop \n Passeig de Garcia \n Visit a town by the seaside \n"
 const Barcelona =({content}) => {
     const {title,images,coverImage,threePortraitImages,cityDescription,description} = content;
-    const newText = ({text}) => text.split('\n').map((item, i) => {
-    return <p key={i}>{item}</p>
-    });
+
     return (
         <div className='country-page'>
           <Introduction titleSize={"large"} url={coverImage} title={title} />
-          {/* <ScrollIndicator /> */}
           <Spacer size={"sm"}/>
           <BlockQuote author={"Vicky, Cristina, Barcelona"} quote={quote}/>
           <Spacer size={"sm"}/>
+          <ImageWithText text={quote} image={images[0]} />
           <ThreeImagesInRowGallery images={images.slice(10,13)}/>
-          <Paragraph text={newText({text:todos})}/>
+          <Paragraph text={parseText(todos)}/>
           <Spacer size={"sm"}/>
-          <FullbleedImageWithText text={p1} image={images[1]}/>
+          <FullbleedImageWithText title={'Spain'} text={p1} image={images[1]}/>
           <EightImagesGallery landscapeUrls={images.slice(2,6)} portraitUrls={images.slice(6,10)}/>
+          <Introduction
+            url={images[11]}
+            titleSize={"small"}
+            title={"Barcelona"}
+          />
+          <BlockQuote author={"some one"} quote={quote} />
+          <ThreeImagesInRowGallery images={images.slice(12,15)} />
+          <Spacer />
         </div>
     );
   

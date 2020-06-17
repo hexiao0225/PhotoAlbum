@@ -12,7 +12,6 @@ const Header = ({ history,content }) => {
     menuName: "menu"
   });
   const cities = Object.keys(content).map(city=>{
-    console.log("city",city)
     const information = content[city]
     return {name:information['title'],value:city,coverImage:information['coverImage']}
   })

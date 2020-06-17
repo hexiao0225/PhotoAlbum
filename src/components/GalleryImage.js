@@ -11,7 +11,7 @@ const GalleryImage = ({ url }) => {
   const isSeen = !(intersection && intersection.intersectionRatio < 0.1);
   return (
     <div className='gallery-image' ref={sectionRef}>
-      <li className={isSeen ? "fade-in-fwd" : "fade-out"}>
+      <li className={isSeen ? "fade-in-fwd" : ""}>
         <img alt='' className='picture' src={url}></img>
       </li>
     </div>

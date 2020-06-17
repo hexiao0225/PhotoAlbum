@@ -275,6 +275,7 @@ body {
 .gallery-landscape li img {
   width: 36vw;
   padding-bottom: 20vw;
+  max-height: 40vh;
 }
 .gallery-landscape ul {
   list-style: none;
