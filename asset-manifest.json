@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/hexiao0225/PhotoAlbum/static/css/main.57a5fb1c.chunk.css",
+    "main.js": "/hexiao0225/PhotoAlbum/static/js/main.83bad2ae.chunk.js",
+    "main.js.map": "/hexiao0225/PhotoAlbum/static/js/main.83bad2ae.chunk.js.map",
+    "runtime-main.js": "/hexiao0225/PhotoAlbum/static/js/runtime-main.40b0d320.js",
+    "runtime-main.js.map": "/hexiao0225/PhotoAlbum/static/js/runtime-main.40b0d320.js.map",
+    "static/js/2.07e76d66.chunk.js": "/hexiao0225/PhotoAlbum/static/js/2.07e76d66.chunk.js",
+    "static/js/2.07e76d66.chunk.js.map": "/hexiao0225/PhotoAlbum/static/js/2.07e76d66.chunk.js.map",
+    "index.html": "/hexiao0225/PhotoAlbum/index.html",
+    "precache-manifest.7710604bcc071d38ab01a04fa259ed59.js": "/hexiao0225/PhotoAlbum/precache-manifest.7710604bcc071d38ab01a04fa259ed59.js",
+    "service-worker.js": "/hexiao0225/PhotoAlbum/service-worker.js",
+    "static/css/main.57a5fb1c.chunk.css.map": "/hexiao0225/PhotoAlbum/static/css/main.57a5fb1c.chunk.css.map",
+    "static/js/2.07e76d66.chunk.js.LICENSE.txt": "/hexiao0225/PhotoAlbum/static/js/2.07e76d66.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/hexiao0225/PhotoAlbum/static/media/Portrait-script-regular.d521e1a9.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.40b0d320.js",
+    "static/js/2.07e76d66.chunk.js",
+    "static/css/main.57a5fb1c.chunk.css",
+    "static/js/main.83bad2ae.chunk.js"
+  ]
+}
