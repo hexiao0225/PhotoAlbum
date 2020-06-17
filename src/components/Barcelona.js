@@ -25,7 +25,7 @@ const Barcelona =({content}) => {
           <Spacer size={"sm"}/>
           <ImageWithText text={quote} image={images[0]} />
           <ThreeImagesInRowGallery images={images.slice(10,13)}/>
-          <Paragraph text={parseText(todos)}/>
+          <FullbleedImageWithText title={'Checklist'} text={parseText(todos)} image={images[15]}/>
           <Spacer size={"sm"}/>
           <FullbleedImageWithText title={'Spain'} text={p1} image={images[1]}/>
           <EightImagesGallery landscapeUrls={images.slice(2,6)} portraitUrls={images.slice(6,10)}/>

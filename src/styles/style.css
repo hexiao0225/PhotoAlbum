@@ -129,14 +129,11 @@ body {
 }
 
 .image-with-text {
-  left: 20vw;
+  margin-left: 20vw;
   width: 80vw;
   height: auto;
   right: 0;
 }
-/* .image-with-text img {
-  margin-left: 20vw;
-} */
 
 .gallery {
   height: 100%;
@@ -192,7 +189,6 @@ body {
 }
 .paragraph {
   font-family: "DINPro Light", sans-serif;
-  margin-left: 20vw;
   font-weight: 300;
   font-size: 12px;
   width: 31vw;
@@ -230,6 +226,10 @@ body {
 .fullbleed-image-with-text .picture {
   padding-top: 8vh;
   padding-bottom: 3vh;
+}
+
+.fullbleed-image-with-text .paragraph {
+  margin-left: 20vw;
 }
 
 .gallery {

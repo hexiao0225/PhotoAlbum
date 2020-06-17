@@ -20,7 +20,7 @@ const Guadalajara = ({ content }) => {
       <Introduction titleSize={"large"} url={coverImage} title={title} />
       <ImageWithText text={sampleText} image={images[0]} />
       <FullbleedImageWithText
-        image={images[1]}
+        image={images[6]}
         text={sampleText}
         title={"Guadalajara"}
       />
