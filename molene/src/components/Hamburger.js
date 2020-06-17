@@ -3,7 +3,6 @@ import { gsap } from "gsap";
 import { Link } from "react-router-dom";
 
 import {
-  staggerText,
   staggerReveal,
   fadeInUp,
   handleHover,
@@ -12,23 +11,6 @@ import {
   handleCity,
   staggerRevealClose
 } from "./Animations";
-
-import dallas from "../images/austin.webp";
-import austin from "../images/austin.webp";
-import newyork from "../images/austin.webp";
-import sanfrancisco from "../images/austin.webp";
-import beijing from "../images/austin.webp";
-
-const fullbleedImageSample1Url =
-  "http://d1v0ujotwdj8lp.cloudfront.net/wp-content/uploads/2019/01/28233949/%C2%A9ALSAFAR-ALGERIA-001-IPAD-min-1440x820.jpg";
-
-// const cities = [
-//   { name: "GuadalaJara", value:"guadalajara",image: fullbleedImageSample1Url },
-//   { name: "Santa Fe", value:"santafe",image: fullbleedImageSample1Url },
-//   { name: "New York", value:"newyork",image: fullbleedImageSample1Url },
-//   { name: "San Francisco", value:"sanfrancisco",image: fullbleedImageSample1Url },
-//   { name: "Dubai", value:"dubai",image: fullbleedImageSample1Url }
-// ];
 
 
 const Hamburger = ({ state,cities }) => {

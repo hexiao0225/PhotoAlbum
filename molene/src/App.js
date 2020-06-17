@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from "react";
 import "./styles/style.css";
+import "./styles/App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { client } from "./components/KontentClient";
 import CountryPage from "./components/CountryPage";
 import Guadalajara from "./components/Guadalajara";
 import NewYork from "./components/NewYork";
-
+import Dubai from "./components/Dubai";
+import SouthIsland from "./components/SouthIsland";
+import Barcelona from "./components/Barcelona";
+import SantaFe from "./components/SantaFe";
 import Header from "./components/Header";
-import "./styles/App.scss";
 
 const parseRawData = (items) => {
-  return items.map((city) => {
+  let result = {};
+  const contents = items.map((city) => {
     const {
       title,
       images,
@@ -23,7 +27,7 @@ const parseRawData = (items) => {
       threeportraitimages,
     } = city;
     return {
-      title: title.value + "" || "",
+      title: title.value + "" || " ",
       description: description.value || "",
       cityDescription: "",
       coverImage: coverimage.value[0].url,
@@ -33,6 +37,12 @@ const parseRawData = (items) => {
       ),
     };
   });
+
+  for (let i = 0; i < contents.length; i++) {
+    const city = contents[i];
+    result[`${city.title.toLowerCase().replace(" ", "")}`] = city;
+  }
+  return result;
 };
 
 const App = () => {
@@ -76,20 +86,51 @@ const App = () => {
                     exact
                     path='/guadalajara'
                     render={(props) => (
-                      <Guadalajara content={state.content} {...props} />
+                      <Guadalajara
+                        content={state.content.guadalajara}
+                        {...props}
+                      />
+                    )}
+                  />
+                  <Route
+                    exact
+                    path='/southisland'
+                    render={(props) => (
+                      <SouthIsland
+                        content={state.content.southisland}
+                        {...props}
+                      />
                     )}
                   />
                   <Route
                     exact
                     path='/newyork'
                     render={(props) => (
-                      <NewYork content={state.content} {...props} />
+                      <NewYork content={state.content.newyork} {...props} />
                     )}
                   />
-                  <Route exact path='/santafe' component={Guadalajara} />
                   <Route exact path='/sanfrancisco' component={Guadalajara} />
-                  <Route exact path='/dubai' component={Guadalajara} />
-                  <Route exact path='/barcelona' component={Guadalajara} />
+                  <Route
+                    exact
+                    path='/dubai'
+                    render={(props) => (
+                      <Dubai content={state.content.dubai} {...props} />
+                    )}
+                  />
+                  <Route
+                    exact
+                    path='/barcelona'
+                    render={(props) => (
+                      <Barcelona content={state.content.barcelona} {...props} />
+                    )}
+                  />
+                  <Route
+                    exact
+                    path='/santafe'
+                    render={(props) => (
+                      <SantaFe content={state.content.santafe} {...props} />
+                    )}
+                  />
                 </Switch>
               )}
             </div>

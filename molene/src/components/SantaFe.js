@@ -5,7 +5,7 @@ import ImageWithText from './ImageWithText'
 import ThreeImagesInRowGallery from "./ThreeImagesInRowGallery";
 import Paragraph from "./Paragraph"
 
-const NewYork =({content}) => {
+const SantaFe =({content}) => {
     const {title,images,coverImage,threePortraitImages,cityDescription,description} = content;
    
     return (
@@ -24,4 +24,4 @@ const NewYork =({content}) => {
   
 }
 
-export default NewYork;
+export default SantaFe;

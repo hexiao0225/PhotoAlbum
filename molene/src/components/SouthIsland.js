@@ -5,7 +5,7 @@ import ImageWithText from './ImageWithText'
 import ThreeImagesInRowGallery from "./ThreeImagesInRowGallery";
 import Paragraph from "./Paragraph"
 
-const NewYork =({content}) => {
+const SouthIsland =({content}) => {
     const {title,images,coverImage,threePortraitImages,cityDescription,description} = content;
    
     return (
@@ -15,13 +15,10 @@ const NewYork =({content}) => {
           <ImageWithText text={description} image={images[2]}/>
           <Paragraph text={description} />
           <Paragraph text={cityDescription} />
-          <ThreeImagesInRowGallery images={threePortraitImages}/>
-          {/* {images.map(image=>
-            <GalleryImage url={image}/>
-          )} */}
+
         </div>
     );
   
 }
 
-export default NewYork;
+export default SouthIsland;

@@ -11,13 +11,7 @@ import ScrollIndicator from "./ScrollIndicator";
 import Paragraph from "./Paragraph";
 
 const Guadalajara = ({ content }) => {
-  const {
-    title,
-    images,
-    coverImage,
-    cityDescription,
-    description,
-  } = content[0];
+  const { title, images, coverImage, cityDescription, description } = content;
   return (
     <div className='country-page'>
       <Introduction titleSize={"large"} url={coverImage} title={title} />

@@ -11,8 +11,10 @@ const Header = ({ history,content }) => {
     clicked: null,
     menuName: "menu"
   });
-  const cities = content.map(city=>{
-    return {name:city.title,value:city.title.toLowerCase().replace(' ',''),coverImage:city.coverImage}
+  const cities = Object.keys(content).map(city=>{
+    console.log("city",city)
+    const information = content[city]
+    return {name:information['title'],value:city,coverImage:information['coverImage']}
   })
 
   // State of our button
