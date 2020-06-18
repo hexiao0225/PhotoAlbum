@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "eb020545a49063974475e0b831682ba2",
+    "revision": "069ac795ddc19c3ae241b84fff25e498",
     "url": "/PhotoAlbum/index.html"
   },
   {
-    "revision": "0f80580cbee00ab163d0",
-    "url": "/PhotoAlbum/static/css/main.a20310ac.chunk.css"
+    "revision": "ed9e7a60d48ef7474dd7",
+    "url": "/PhotoAlbum/static/css/main.448efe63.chunk.css"
   },
   {
-    "revision": "c6ba7d64a9e38620b745",
-    "url": "/PhotoAlbum/static/js/2.c140b3e4.chunk.js"
+    "revision": "2322456f43adf84db75c",
+    "url": "/PhotoAlbum/static/js/2.4c6f73d3.chunk.js"
   },
   {
     "revision": "236a9cef38ee70c895f699466f1ff3bf",
-    "url": "/PhotoAlbum/static/js/2.c140b3e4.chunk.js.LICENSE.txt"
+    "url": "/PhotoAlbum/static/js/2.4c6f73d3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0f80580cbee00ab163d0",
-    "url": "/PhotoAlbum/static/js/main.2c5db1ee.chunk.js"
+    "revision": "ed9e7a60d48ef7474dd7",
+    "url": "/PhotoAlbum/static/js/main.d762bc34.chunk.js"
   },
   {
     "revision": "3d5ffbbc5847ecb158cd",
