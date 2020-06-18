@@ -59,7 +59,7 @@ const introImageUrl2 =
       <ScrollIndicator />
       <ImageWithText text={sampleText} image={ImageWithTextUrl} />
       <FullbleedImageWithText
-        url={fullbleedImageSample1Url}
+        image={fullbleedImageSample1Url}
         text={sampleText}
         title={fullbleedTitle}
       />
@@ -72,7 +72,6 @@ const introImageUrl2 =
         titleSize={"small"}
         title={"Amal Jodwani"}
       />
-      <BlockQuote author={sampleAuthor} quote={sampleQuote} />
       <ThreeImagesInRowGallery images={ImagesForThreeImagesInRowGallery} />
       <Spacer />
       <FullbleedImageWithText url={fullbleedImageSample2Url} />

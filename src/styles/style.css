@@ -54,10 +54,6 @@ body {
   width: 100%;
 }
 
-.introduction-title li {
-  display: inline;
-}
-
 .introduction-title {
   height: auto;
   /* overlap the text with image */
@@ -65,7 +61,6 @@ body {
   margin-left: calc(20vw + 2.5%);
   position: absolute;
   color: #181818;
-  /* font-family: "DINPro Bold", sans-serif; */
   font-style: normal;
   font-size: 12rem;
   font-weight: 700;
@@ -73,14 +68,10 @@ body {
   z-index: 1;
 }
 
-.small-introduction-title li {
-  display: inline;
-}
-
 .small-introduction-title {
   height: auto;
   /* overlap the text with image */
-  transform: translate(0, 30px);
+  transform: translate(0, 4rem);
   margin-left: calc(20vw + 2.5%);
   position: absolute;
   color: #181818;
@@ -96,7 +87,7 @@ body {
   height: auto;
   position: absolute;
   right: 0;
-  margin-top: 8.1rem;
+  margin-top: 8rem;
 }
 
 .scroll {
@@ -129,7 +120,7 @@ body {
 }
 
 .image-with-text {
-  left: 20vw;
+  margin-left: 20vw;
   width: 80vw;
   height: auto;
   right: 0;
@@ -143,9 +134,21 @@ body {
 }
 
 /* General */
-.spacer {
+.spacer-sm {
+  content: "";
+  height: 10vh;
+  width: 100vw;
+  background: transparent;
+}
+.spacer-md {
   content: "";
   height: 20vh;
+  width: 100vw;
+  background: transparent;
+}
+.spacer-lg {
+  content: "";
+  height: 30vh;
   width: 100vw;
   background: transparent;
 }
@@ -177,7 +180,6 @@ body {
 }
 .paragraph {
   font-family: "DINPro Light", sans-serif;
-  margin-left: 20vw;
   font-weight: 300;
   font-size: 12px;
   width: 31vw;
@@ -217,13 +219,18 @@ body {
   padding-bottom: 3vh;
 }
 
+.fullbleed-image-with-text .paragraph {
+  margin-left: 20vw;
+}
+
 .gallery {
   margin-left: 20vw;
   padding-bottom: 20vh;
 }
 
 .gallery-portrait li img {
-  width: 20vw;
+  max-width: 20vw;
+  min-height: 70vh;
 }
 .gallery-portrait {
   list-style: none;
@@ -245,7 +252,7 @@ body {
 }
 .gallery-portrait :nth-child(4) img {
   margin-left: 0;
-  transform: translateY(195.436px);
+  transform: translateY(136.948px);
 }
 
 /* vertical */
@@ -259,6 +266,7 @@ body {
 .gallery-landscape li img {
   width: 36vw;
   padding-bottom: 20vw;
+  max-height: 40vh;
 }
 .gallery-landscape ul {
   list-style: none;
