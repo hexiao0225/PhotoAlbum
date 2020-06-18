@@ -2,11 +2,15 @@ import React from "react";
 
 const Title = ({ title, titleSize }) => {
   return (
-    <div className={
+    <div
+      className={
         titleSize === "large"
           ? "introduction-title unfold-to-right"
           : "small-introduction-title"
-      }>{title}</div>
+      }
+    >
+      {title}
+    </div>
   );
 };
 

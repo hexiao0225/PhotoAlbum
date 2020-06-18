@@ -13,10 +13,14 @@ const ThreeImagesInRowGallery = ({ images } = {}) => {
   return (
     <div ref={sectionRef} className='three-images-in-row-gallery'>
       <ul>
-        {images.map((url) => (
-          <li>
+        {images.map((url, index) => (
+          <li key={index}>
             <img
-              className={isSeen ? "portrait-picture scale-down-center" : "portrait-picture"}
+              className={
+                isSeen
+                  ? "portrait-picture scale-down-center"
+                  : "portrait-picture"
+              }
               alt=''
               src={url}
             ></img>

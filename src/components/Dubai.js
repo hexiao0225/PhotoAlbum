@@ -13,41 +13,47 @@ const sampleText =
 const sampleQuote = "We believe our blog will have a strong influence.";
 const sampleAuthor = "Amal Jodwani";
 
+const Dubai = ({ content }) => {
+  const {
+    title,
+    coverImage,
+    map,
+    horizontalImages,
+    eightImages,
+    threeImages,
+    sectionCoverImages,
+  } = content;
 
-const Dubai =({content}) => {
-    const { title,coverImage,map,horizontalImages,eightImages,threeImages,sectionCoverImages } = content;
-
-    return (
-        <div className='country-page'>
-          <Introduction titleSize={"large"} url={coverImage} title={title} />
-          <ImageWithText text={sampleText} image={map} />
-          <FullbleedImageWithText
-            image={horizontalImages[0]}
-            text={sampleText}
-            title={"Dubai"}
-          />
-          <EightImagesGallery
-            portraitUrls={eightImages.slice(0,4)}
-            landscapeUrls={eightImages.slice(4,8)}
-          />
-          <FullbleedImageWithText
-            image={horizontalImages[1]}
-            text={sampleText}
-            title={"Dubai"}
-          />
-          <Introduction
-            url={sectionCoverImages[0]}
-            titleSize={"small"}
-            title={"Al Maha"}
-          />
-          <ThreeImagesInRowGallery images={threeImages} />
-          <Spacer />
-          <FullbleedImageWithText url={horizontalImages[1]} />
-          <BlockQuote author={sampleAuthor} quote={sampleQuote} />
-          <Spacer />
-        </div>
-    );
-  
-}
+  return (
+    <div className='country-page'>
+      <Introduction titleSize={"large"} url={coverImage} title={title} />
+      <ImageWithText text={sampleText} image={map} />
+      <FullbleedImageWithText
+        image={horizontalImages[0]}
+        text={sampleText}
+        title={"Dubai"}
+      />
+      <EightImagesGallery
+        portraitUrls={eightImages.slice(0, 4)}
+        landscapeUrls={eightImages.slice(4, 8)}
+      />
+      <FullbleedImageWithText
+        image={horizontalImages[1]}
+        text={sampleText}
+        title={"Dubai"}
+      />
+      <Introduction
+        url={sectionCoverImages[0]}
+        titleSize={"small"}
+        title={"Al Maha"}
+      />
+      <ThreeImagesInRowGallery images={threeImages} />
+      <Spacer />
+      <FullbleedImageWithText url={horizontalImages[1]} />
+      <BlockQuote author={sampleAuthor} quote={sampleQuote} />
+      <Spacer />
+    </div>
+  );
+};
 
 export default Dubai;
