@@ -14,32 +14,37 @@ const sampleQuote = "We believe our blog will have a strong influence.";
 const sampleAuthor = "Amal Jodwani";
 
 const Guadalajara = ({ content }) => {
-  const { title, images, coverImage,map } = content;
+  const {
+    title,
+    coverImage,
+    map,
+    eightImages,
+    threeImages,
+    sectionCoverImages,
+  } = content;
   return (
     <div className='country-page'>
       <Introduction titleSize={"large"} url={coverImage} title={title} />
       <ImageWithText text={sampleText} image={map} />
       <FullbleedImageWithText
-        image={images[6]}
+        image={sectionCoverImages[0]}
         text={sampleText}
         title={"Guadalajara"}
       />
       <EightImagesGallery
-        portraitUrls={images.slice(2,6)}
-        landscapeUrls={images.slice(6,10)}
+        portraitUrls={eightImages.slice(0, 4)}
+        landscapeUrls={eightImages.slice(4, 8)}
       />
+      <BlockQuote author={"Rent - 12"}
+        quote={"Guadalajara"} />
+      <ThreeImagesInRowGallery images={threeImages} />
       <Spacer />
-      <Introduction
-        url={images[10]}
-        titleSize={"small"}
+      <FullbleedImageWithText
+        image={sectionCoverImages[1]}
+        text={sampleText}
         title={"Guadalajara"}
       />
-      <BlockQuote author={"some one"} quote={sampleQuote} />
-      <ThreeImagesInRowGallery images={images.slice(11,14)} />
-      <Spacer />
-      <FullbleedImageWithText url={images[15]} />
-      <BlockQuote author={sampleAuthor} quote={sampleQuote} />
-      <Spacer />
+      
     </div>
   );
 };

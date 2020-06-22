@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-// import "./styles/style.css";
 import "./styles/App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import { client } from "./components/KontentClient";
 import CountryPage from "./components/CountryPage";
 import Guadalajara from "./components/Guadalajara";
@@ -97,7 +97,21 @@ const App = () => {
                       <Dubai content={state.content.dubai} {...props} />
                     )}
                   />
-                  {/* <Route
+                  <Route
+                    exact
+                    path='/newyork'
+                    render={(props) => (
+                      <NewYork content={state.content.newyork} {...props} />
+                    )}
+                  />
+                  <Route
+                    exact
+                    path='/santafe'
+                    render={(props) => (
+                      <SantaFe content={state.content.santafe} {...props} />
+                    )}
+                  />
+                  <Route
                     exact
                     path='/guadalajara'
                     render={(props) => (
@@ -109,6 +123,14 @@ const App = () => {
                   />
                   <Route
                     exact
+                    path='/barcelona'
+                    render={(props) => (
+                      <Barcelona content={state.content.barcelona} {...props} />
+                    )}
+                  />
+                  {/* 
+                  <Route
+                    exact
                     path='/southisland'
                     render={(props) => (
                       <SouthIsland
@@ -117,29 +139,11 @@ const App = () => {
                       />
                     )}
                   />
-                  <Route
-                    exact
-                    path='/newyork'
-                    render={(props) => (
-                      <NewYork content={state.content.newyork} {...props} />
-                    )}
-                  />
+
                   <Route exact path='/sanfrancisco' component={Guadalajara} />
 
-                  <Route
-                    exact
-                    path='/barcelona'
-                    render={(props) => (
-                      <Barcelona content={state.content.barcelona} {...props} />
-                    )}
-                  />
-                  <Route
-                    exact
-                    path='/santafe'
-                    render={(props) => (
-                      <SantaFe content={state.content.santafe} {...props} />
-                    )}
-                  /> */}
+                  
+                   */}
                 </Switch>
               )}
             </div>

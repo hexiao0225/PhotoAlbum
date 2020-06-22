@@ -10,30 +10,7 @@ $desktop: "(min-width: 1026px)";
   font-style: normal;
   font-weight: normal;
   src: local("DINPro Light"),
-    url("../fonts/DINPro-Light\ tr.woff") format("woff");
-}
-
-@font-face {
-  font-family: "DINPro Medium";
-  font-style: normal;
-  font-weight: normal;
-  src: local("DINPro Medium"),
-    url("../fonts//DINPro-Medium\ tr.woff") format("woff");
-}
-
-@font-face {
-  font-family: "DINPro Bold";
-  font-style: normal;
-  font-weight: normal;
-  src: local("DINPro Bold"), url("../fonts/DINPro-Bold\ tr.woff") format("woff");
-}
-
-@font-face {
-  font-family: "DINPro Black";
-  font-style: normal;
-  font-weight: normal;
-  src: local("DINPro Black"),
-    url("../fonts/DINPro-Bold\ tr.woff") format("woff");
+    url("../fonts/DINPro-Light_13935.woff") format("woff");
 }
 
 @font-face {
@@ -715,6 +692,9 @@ header {
         @media #{$mobile} {
           display: none;
         }
+        @media #{$tablet} {
+          display: none;
+        }
         bottom: 0;
         left: 0;
         right: 0;
@@ -748,13 +728,18 @@ header {
               padding: 0;
               li {
                 list-style: none;
-                font-size: 4rem;
+                font-size: 2rem;
                 font-weight: 600;
                 cursor: pointer;
                 height: 100px;
                 overflow: hidden;
                 position: relative;
-                width: 50vw;
+                width: 40vw;
+
+                @media #{$desktop} {
+                  font-size: 4rem;
+                  width: 50vw;
+                }
 
                 a {
                   position: absolute;

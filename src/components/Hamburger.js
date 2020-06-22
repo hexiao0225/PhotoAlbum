@@ -60,6 +60,7 @@ const Hamburger = ({ state,cities }) => {
                 {cities.map((el,index) => (
                     <li key={index}>
                     <Link
+                    onClick={()=>{window.scrollTo(0,0)}}
                       to={`${el.value}`}>
                    <span
                     key={el.name}
