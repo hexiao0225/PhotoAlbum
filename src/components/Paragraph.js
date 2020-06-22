@@ -11,12 +11,12 @@ const Paragraph = ({ text, title }) => {
   const isSeen = !(intersection && intersection.intersectionRatio < 0.2);
   return (
     <div ref={sectionRef}>
-      <h3 className={isSeen ? "script-title fade-in" : "script-title fade-out"}>
+      {title && <h3 className={isSeen ? "script-title fade-in" : "script-title"}>
         {title}
-      </h3>
-      <p className={isSeen ? "paragraph fade-in" : "paragraph fade-out"}>
+      </h3>}
+      {text && <p className={isSeen ? "paragraph fade-in" : "paragraph"}>
         {text}
-      </p>
+      </p>}
     </div>
   );
 };

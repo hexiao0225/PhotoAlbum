@@ -13,37 +13,36 @@ const sampleText =
 const sampleQuote = "We believe our blog will have a strong influence.";
 const sampleAuthor = "Amal Jodwani";
 
-const SouthIsland =({content}) => {
-    const { title,images,coverImage,map } = content;
-   
-    return (
-        <div className='country-page'>
-          <Introduction titleSize={"large"} url={coverImage} title={title} />
-          <ImageWithText text={sampleText} image={map} />
-          <FullbleedImageWithText
-            image={images[1]}
-            text={sampleText}
-            title={"South Island"}
-          />
-          <EightImagesGallery
-            portraitUrls={images.slice(2,6)}
-            landscapeUrls={images.slice(6,10)}
-          />
-          <Spacer />
-          <Introduction
-            url={images[10]}
-            titleSize={"small"}
-            title={"South Island"}
-          />
-          <BlockQuote author={"some one"} quote={sampleQuote} />
-          <ThreeImagesInRowGallery images={images.slice(11,14)} />
-          <Spacer />
-          <FullbleedImageWithText url={images[15]} />
-          <BlockQuote author={sampleAuthor} quote={sampleQuote} />
-          <Spacer />
-        </div>
-    );
-  
-}
+const SouthIsland = ({ content }) => {
+  const { title, images, coverImage, map } = content;
+
+  return (
+    <div className='country-page'>
+      <Introduction titleSize={"large"} url={coverImage} title={title} />
+      <ImageWithText text={sampleText} image={map} />
+      <FullbleedImageWithText
+        image={images[1]}
+        text={sampleText}
+        title={"South Island"}
+      />
+      <EightImagesGallery
+        portraitUrls={images.slice(2, 6)}
+        landscapeUrls={images.slice(6, 10)}
+      />
+      <Spacer />
+      <Introduction
+        url={images[10]}
+        titleSize={"small"}
+        title={"South Island"}
+      />
+      <BlockQuote author={"some one"} quote={sampleQuote} />
+      <ThreeImagesInRowGallery images={images.slice(11, 14)} />
+      <Spacer />
+      <FullbleedImageWithText url={images[15]} />
+      <BlockQuote author={sampleAuthor} quote={sampleQuote} />
+      <Spacer />
+    </div>
+  );
+};
 
 export default SouthIsland;

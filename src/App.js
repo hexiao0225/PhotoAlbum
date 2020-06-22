@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./styles/style.css";
+// import "./styles/style.css";
 import "./styles/App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { client } from "./components/KontentClient";
@@ -22,17 +22,19 @@ const parseRawData = (items) => {
       horizontalimages,
       eightimages,
       threeimages,
-      sectioncoverimages
+      sectioncoverimages,
     } = city;
-    
+
     return {
       title: title.value + "" || " ",
       coverImage: coverimage.value[0].url,
-      map:map.value && map.value.length ? map.value[0].url : "",
-      horizontalImages:horizontalimages.rawData.value.map((image) => image.url)|| [],
-      eightImages:eightimages.rawData.value.map((image) => image.url)|| [],
-      threeImages:threeimages.rawData.value.map((image) => image.url)|| [],
-      sectionCoverImages:sectioncoverimages.rawData.value.map((image) => image.url) || []
+      map: map.value && map.value.length ? map.value[0].url : "",
+      horizontalImages:
+        horizontalimages.rawData.value.map((image) => image.url) || [],
+      eightImages: eightimages.rawData.value.map((image) => image.url) || [],
+      threeImages: threeimages.rawData.value.map((image) => image.url) || [],
+      sectionCoverImages:
+        sectioncoverimages.rawData.value.map((image) => image.url) || [],
     };
   });
 
@@ -62,7 +64,7 @@ const App = () => {
         "horizontalimages",
         "eightimages",
         "threeimages",
-        "sectioncoverimages"
+        "sectioncoverimages",
       ])
       .toObservable()
       .subscribe((response) => {

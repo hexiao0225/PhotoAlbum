@@ -57,8 +57,8 @@ const Hamburger = ({ state,cities }) => {
             <div className='menu-links'>
               <nav >
                 <ul>
-                {cities.map(el => (
-                    <li>
+                {cities.map((el,index) => (
+                    <li key={index}>
                     <Link
                       to={`${el.value}`}>
                    <span

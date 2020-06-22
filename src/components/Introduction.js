@@ -1,16 +1,18 @@
 import React from "react";
-import Title from "./Title";
-import Paragraph from "./Paragraph";
 
 export const Introduction = ({ url, titleSize, title }) => {
   return (
     <div className='introduction'>
-      <div className='introduction-head'>
-        <Title titleSize={titleSize} title={title} />
-        <div className='introduction-cover-wrapper'>
-          <img alt='' className='picture' src={url}></img>
-        </div>
-      </div>
+      <div
+      className={
+        titleSize === "large"
+          ? "introduction-title unfold-to-right"
+          : "script-title"
+      }
+    >
+      {title}
+    </div>
+      <img alt='' className='picture' src={url}></img>
     </div>
   );
 };
