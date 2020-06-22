@@ -37,6 +37,7 @@ const Dubai = ({ content }) => {
         portraitUrls={eightImages.slice(0, 4)}
         landscapeUrls={eightImages.slice(4, 8)}
       />
+<<<<<<< HEAD
       <Spacer />
       <Introduction titleSize={"small"} url={sectionCoverImages[0]} title={"Al Maha"} />
       <ThreeImagesInRowGallery images={threeImages} />
@@ -44,6 +45,23 @@ const Dubai = ({ content }) => {
       <Spacer />
       <BlockQuote author={sampleAuthor} quote={sampleQuote} />
       <Spacer size={"lg"} />
+=======
+      <FullbleedImageWithText
+        image={horizontalImages[1]}
+        text={sampleText}
+        title={"Dubai"}
+      />
+      <Introduction
+        url={sectionCoverImages[0]}
+        titleSize={"small"}
+        title={"Al Maha"}
+      />
+      <ThreeImagesInRowGallery images={threeImages} />
+      <Spacer />
+      <FullbleedImageWithText url={horizontalImages[1]} />
+      <BlockQuote author={sampleAuthor} quote={sampleQuote} />
+      <Spacer />
+>>>>>>> ab361922eac9b713a6e903b7b06b20494b7a4f41
     </div>
   );
 };
