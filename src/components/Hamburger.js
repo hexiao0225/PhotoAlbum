@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 import {
   staggerReveal,
   fadeInUp,
-  handleHover,
-  handleHoverExit,
   handleCityReturn,
   handleCity,
   staggerRevealClose
@@ -20,6 +18,7 @@ const Hamburger = ({ state,cities }) => {
   let cityBackground = useRef(null);
   let info = useRef(null);
 
+  const locations = cities.filter(city => city.name === "On the Road").concat(cities.filter(city => city.name !== "On the Road"))
   useEffect(() => {
     if (state.clicked === false) {
       // If menu is closed and we want to open it.
@@ -57,9 +56,10 @@ const Hamburger = ({ state,cities }) => {
             <div className='menu-links'>
               <nav >
                 <ul>
-                {cities.map((el,index) => (
+                {locations.map((el,index) => (
                     <li key={index}>
                     <Link
+                    onClick={()=>{window.scrollTo(0,0)}}
                       to={`${el.value}`}>
                    <span
                     key={el.name}

@@ -13,7 +13,7 @@ const Header = ({ history,content }) => {
   });
   const cities = Object.keys(content).map(city=>{
     const information = content[city]
-    return {name:information['title'],value:city,coverImage:information['coverImage']}
+    return {name:information['title'],value:city.replace(" ",""),coverImage:information['coverImage']}
   })
 
   // State of our button
@@ -58,7 +58,7 @@ const Header = ({ history,content }) => {
   };
 
   return (
-    <header>
+    <header className="light-mode">
       <div className="container">
         <div className="wrapper">
           <div className="inner-header">
