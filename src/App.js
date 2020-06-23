@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import React, { useState, useEffect,useRef } from "react";
 import { useIntersection } from "react-use";
 
+=======
+import React, { useState, useEffect } from "react";
+>>>>>>> 260334fd13495b05299b3445ad21500ffdb6268c
 import "./styles/App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import { client } from "./components/KontentClient";
 import Guadalajara from "./components/Guadalajara";
 import NewYork from "./components/NewYork";
@@ -127,13 +132,30 @@ const App = () => {
                       <Barcelona content={state.content.barcelona} {...props} />
                     )}
                   />
+                  {/* 
                   <Route
                     exact
+<<<<<<< HEAD
                     path='/ontheroad'
                     render={(props) => (
                       <OnTheRoad content={state.content.ontheroad} {...props} />
                     )}
                   />
+=======
+                    path='/southisland'
+                    render={(props) => (
+                      <SouthIsland
+                        content={state.content.southisland}
+                        {...props}
+                      />
+                    )}
+                  />
+
+                  <Route exact path='/sanfrancisco' component={Guadalajara} />
+
+                  
+                   */}
+>>>>>>> 260334fd13495b05299b3445ad21500ffdb6268c
                 </Switch>
               )}
             </div>
