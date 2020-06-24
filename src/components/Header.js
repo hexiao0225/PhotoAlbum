@@ -24,11 +24,7 @@ const Header = ({ history, content }) => {
   // State of our button
   const [disabled, setDisabled] = useState(false);
   // State of header color
-<<<<<<< HEAD
   const [lightMode, setLightMode] = useState(isInHomePage);
-=======
-  const [lightMode,setLightMode] = useState(window.location.pathname.includes("road"))
->>>>>>> 0175241840d261f69406a5f79f6a9ec03a3084d7
   //Use Effect
   useEffect(() => {
     //Listening for page changes.
