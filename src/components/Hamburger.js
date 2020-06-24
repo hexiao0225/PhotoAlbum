@@ -11,7 +11,7 @@ import {
 } from "./Animations";
 
 
-const Hamburger = ({ state,cities }) => {
+const Hamburger = ({ state,cities,setLightMode,setDarkMode }) => {
   let menuLayer = useRef(null);
   let reveal1 = useRef(null);
   let reveal2 = useRef(null);
@@ -59,7 +59,14 @@ const Hamburger = ({ state,cities }) => {
                 {locations.map((el,index) => (
                     <li key={index}>
                     <Link
-                    onClick={()=>{window.scrollTo(0,0)}}
+                    onClick={()=>{
+                      window.scrollTo(0,0);
+                      if(el.value === "ontheroad"){
+                        setLightMode();
+                      }else{
+                        setDarkMode();
+                      }
+                    }}
                       to={`${el.value}`}>
                    <span
                     key={el.name}
