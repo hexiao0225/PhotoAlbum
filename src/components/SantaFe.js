@@ -23,7 +23,7 @@ const SantaFe = ({ content }) => {
   return (
     <div className='country-page'>
       <Introduction titleSize={"large"} url={coverImage} title={title} />
-      <FullbleedImageWithText title={"Confession of a Tile"}text={parseText(tile)} image={map} />
+      <FullbleedImageWithText title={"Confession of a Tile"} text={parseText(tile)} image={map} />
       <FullbleedImageWithText
         image={sectionCoverImages[0]}
         text={parseText(dog)}
