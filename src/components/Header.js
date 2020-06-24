@@ -20,7 +20,7 @@ const Header = ({ history, content }) => {
     };
   });
   const isInHomePage =
-    window.location.hash.includes("road") || window.location.hash === "/";
+    window.location.hash.includes("road") || window.location.hash === "#/";
   // State of our button
   const [disabled, setDisabled] = useState(false);
   // State of header color
