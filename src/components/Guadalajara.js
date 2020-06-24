@@ -6,13 +6,11 @@ import EightImagesGallery from "./EightImagesGallery";
 import ThreeImagesInRowGallery from "./ThreeImagesInRowGallery";
 import BlockQuote from "./BlockQuote";
 import Spacer from "./Spacer";
-
-const sampleText =
-  "Algeria is a fascinating country with an impressive size on the map. It is the largest African country, the largest country in the Mediterranean basin, and the largest country in the Arab world. \n 2.382 million km2 of land to explore: a traveler’s dream. Not very open to tourism and relatively unknown, Algeria is shrouded in mystery. It is a three-faced country that operates at three speeds. Turned towards the Mediterranean, the North is urban, modern and dynamic. The deeper we go inland and into the mountains (Kabylia, the land of the Chaoui…), the more the populations are rural and live according to traditional lifestyles… then comes the vast desert, which represents a door to another world.";
-
-const sampleQuote = "We believe our blog will have a strong influence.";
-const sampleAuthor = "Amal Jodwani";
-
+import { parseText } from "../util/helper";
+import Paragraph from "./Paragraph";
+const coffeeshop = "Gestures no longer work, when it comes to describing fruity flavors. A young woman helped me to translate the order to Spanish. \n - \n You speak really good English. \n I lived in LA before. \n Are you from Guadalajara? \n Yes. "
+const lagunablanca = "At Cafe P’al Real \n Girl who works at the Cafe and I \n - \n I’m from Mexico City. I have lived here for 8 years. \n Is there any good pottery shop nearby? \n Lagunablanca. By the way do you like vintage clothing? \n Yes !  \n I recommend this store. \n [Typing Bravo Vintage 2 on my phone] \n This sweater is from them. \n [Pointing to her knit pattern sweater] "
+const museum = "The museum is inside a 19 century colonial era architecture, \n preserving indigenous handcrafts of Jalisco. \n The red paint on the wall reminds me of Orhan Pamuk’s My Name is Red."
 const Guadalajara = ({ content }) => {
   const {
     title,
@@ -25,26 +23,27 @@ const Guadalajara = ({ content }) => {
   return (
     <div className='country-page'>
       <Introduction titleSize={"large"} url={coverImage} title={title} />
-      <ImageWithText text={sampleText} image={map} />
+      <ImageWithText image={map} />
       <FullbleedImageWithText
         image={sectionCoverImages[0]}
-        text={sampleText}
-        title={"Guadalajara"}
+        text={parseText(lagunablanca)}
+        title={"Lagunablanca"}
       />
       <EightImagesGallery
         portraitUrls={eightImages.slice(0, 4)}
         landscapeUrls={eightImages.slice(4, 8)}
       />
-      <BlockQuote author={"Rent - 12"}
-        quote={"Guadalajara"} />
-      <ThreeImagesInRowGallery images={threeImages} />
-      <Spacer />
+      <FullbleedImageWithText
+        image={sectionCoverImages[2]}
+        text={parseText(coffeeshop)}
+      />
       <FullbleedImageWithText
         image={sectionCoverImages[1]}
-        text={sampleText}
-        title={"Guadalajara"}
+        title={"Ceramics"}
+        text={parseText(museum)}
       />
-      
+      <ThreeImagesInRowGallery images={threeImages} />
+      <div className="footer"> </div>
     </div>
   );
 };

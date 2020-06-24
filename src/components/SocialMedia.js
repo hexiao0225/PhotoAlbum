@@ -4,19 +4,13 @@ const SocialMedia = () => {
   return (
     <ul className='header-socials'>
       <li>
-        <a href='https://twitter.com' target='_blank'>
+        <a href='mailto:hexiao0225@gmail.com'>
           <span></span>
-          Tw
+          Em
         </a>
       </li>
       <li>
-        <a href='https://www.facebook.com/' target='_blank'>
-          <span></span>
-          Fb
-        </a>
-      </li>
-      <li>
-        <a href='https://www.instagram.com' target='_blank'>
+        <a href='https://www.instagram.com/xiao.he.art/' target='_blank'>
           <span></span>
           In
         </a>

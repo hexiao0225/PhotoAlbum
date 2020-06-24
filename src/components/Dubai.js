@@ -6,12 +6,11 @@ import EightImagesGallery from "./EightImagesGallery";
 import ThreeImagesInRowGallery from "./ThreeImagesInRowGallery";
 import BlockQuote from "./BlockQuote";
 import Spacer from "./Spacer";
+import { parseText } from "../util/helper";
 
-const sampleText =
-  "Algeria is a fascinating country with an impressive size on the map. It is the largest African country, the largest country in the Mediterranean basin, and the largest country in the Arab world. \n 2.382 million km2 of land to explore: a traveler’s dream. Not very open to tourism and relatively unknown, Algeria is shrouded in mystery. It is a three-faced country that operates at three speeds. Turned towards the Mediterranean, the North is urban, modern and dynamic. The deeper we go inland and into the mountains (Kabylia, the land of the Chaoui…), the more the populations are rural and live according to traditional lifestyles… then comes the vast desert, which represents a door to another world.";
-
-const sampleQuote = "We believe our blog will have a strong influence.";
-const sampleAuthor = "Amal Jodwani";
+const overview ="Dubai is a fascinating city in the United Arab Emirates - luxurious, full of man wonders, truly internationalized, modern and dynamic. Yet a 45-minute drive can take you to the deep inland desert of wildlife and rural lifestyle, into another world. "
+const almaha = "Al Maha \n Camel \n Desert dinner \n Sand \n A man with South African accent \n A girl from Jiangxi, China \n Two Japanese couples"
+const quote = "A contemporary one thousand and one nights";
 
 const Dubai = ({ content }) => {
   const {
@@ -27,22 +26,20 @@ const Dubai = ({ content }) => {
   return (
     <div className='country-page'>
       <Introduction titleSize={"large"} url={coverImage} title={title} />
-      <ImageWithText text={sampleText} image={map} />
+      <ImageWithText text={overview} image={map} />
       <FullbleedImageWithText
         image={horizontalImages[0]}
-        text={sampleText}
-        title={"Dubai"}
+        text={parseText(almaha)}
+        title={"Fragments"}
       />
       <EightImagesGallery
         portraitUrls={eightImages.slice(0, 4)}
         landscapeUrls={eightImages.slice(4, 8)}
       />
-      <Spacer />
-      <Introduction titleSize={"small"} url={sectionCoverImages[0]} title={"Al Maha"} />
+      <FullbleedImageWithText image={sectionCoverImages[0]} title={"Al Maha"}/>
       <ThreeImagesInRowGallery images={threeImages} />
       <FullbleedImageWithText image={horizontalImages[1]} />
-      <Spacer />
-      <BlockQuote author={sampleAuthor} quote={sampleQuote} />
+      <BlockQuote quote={quote} />
       <Spacer size={"lg"} />
     </div>
   );

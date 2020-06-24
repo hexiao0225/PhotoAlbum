@@ -1,24 +1,30 @@
 import React, { useState, useEffect } from "react";
-import { withRouter, Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import Hamburger from "./Hamburger";
 import SocialMedia from "./SocialMedia";
 import Logo from "./Logo";
 
-const Header = ({ history,content }) => {
+const Header = ({ history, content }) => {
   // State of our Menu
   const [state, setState] = useState({
     initial: false,
     clicked: null,
-    menuName: "menu"
+    menuName: "menu",
   });
-  const cities = Object.keys(content).map(city=>{
-    const information = content[city]
-    return {name:information['title'],value:city.replace(" ",""),coverImage:information['coverImage']}
-  })
-
+  const cities = Object.keys(content).map((city) => {
+    const information = content[city];
+    return {
+      name: information["title"],
+      value: city.replace(" ", ""),
+      coverImage: information["coverImage"],
+    };
+  });
+  const isInHomePage =
+    window.location.hash.includes("road") || window.location.hash === "/";
   // State of our button
   const [disabled, setDisabled] = useState(false);
-
+  // State of header color
+  const [lightMode, setLightMode] = useState(isInHomePage);
   //Use Effect
   useEffect(() => {
     //Listening for page changes.
@@ -34,18 +40,23 @@ const Header = ({ history,content }) => {
       setState({
         initial: null,
         clicked: true,
-        menuName: "close"
+        menuName: "close",
       });
+      setLightMode(true);
     } else if (state.clicked === true) {
       setState({
         clicked: !state.clicked,
-        menuName: "menu"
+        menuName: "menu",
       });
+      if (!isInHomePage) {
+        setLightMode(false);
+      }
     } else if (state.clicked === false) {
       setState({
         clicked: !state.clicked,
-        menuName: "close"
+        menuName: "close",
       });
+      setLightMode(true);
     }
   };
 
@@ -54,33 +65,46 @@ const Header = ({ history,content }) => {
     setDisabled(!disabled);
     setTimeout(() => {
       setDisabled(false);
-    }, 1200);
+    }, 1000);
   };
 
   return (
-    <header className="light-mode">
-      <div className="container">
-        <div className="wrapper">
-          <div className="inner-header">
-              <div className="side-panel">
+    <header className={lightMode ? "light-mode" : ""}>
+      <div className='container'>
+        <div className='wrapper'>
+          <div className='inner-header'>
+            <div className='side-panel'>
               <div disabled={disabled} onClick={handleMenu} className='menu'>
-            <div className='menu-border'></div>
-            {state.menuName === "menu" ? <div className='menu-icon'>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div> :<div className='menu-close-icon'><span></span><span></span></div>}
-            </div>
-            
-            <SocialMedia />
-      <Logo><Link to="/"></Link></Logo>
+                <div className='menu-border'></div>
+                {state.menuName === "menu" ? (
+                  <div className='menu-icon'>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                ) : (
+                  <div className='menu-close-icon'>
+                    <span></span>
+                    <span></span>
+                  </div>
+                )}
               </div>
-            
+              <SocialMedia />
+              <Logo />
+            </div>
           </div>
         </div>
       </div>
-      <Hamburger cities={cities} state={state} />
-      
+      <Hamburger
+        setLightMode={() => {
+          setLightMode(true);
+        }}
+        setDarkMode={() => {
+          setLightMode(false);
+        }}
+        cities={cities}
+        state={state}
+      />
     </header>
   );
 };

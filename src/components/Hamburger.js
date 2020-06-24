@@ -1,24 +1,28 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { Link } from "react-router-dom";
+import { parseText } from "../util/helper";
 
 import {
   staggerReveal,
   fadeInUp,
   handleCityReturn,
   handleCity,
-  staggerRevealClose
+  staggerRevealClose,
 } from "./Animations";
 
-
-const Hamburger = ({ state,cities }) => {
+const about =
+  "A chain of threaded footprints \n A linear residue of the transitory, \n the fleeting, \n the contingent memory. \n A tangible past \n in muted ballad \n whispering formless lyrics \n A collage of light and dark \n capturing corners, glimpses, \n and the immovable,\n the eternal memory.";
+const Hamburger = ({ state, cities, setLightMode, setDarkMode }) => {
   let menuLayer = useRef(null);
   let reveal1 = useRef(null);
   let reveal2 = useRef(null);
   let cityBackground = useRef(null);
   let info = useRef(null);
 
-  const locations = cities.filter(city => city.name === "On the Road").concat(cities.filter(city => city.name !== "On the Road"))
+  const locations = cities
+    .filter((city) => city.name === "On the Road")
+    .concat(cities.filter((city) => city.name !== "On the Road"));
   useEffect(() => {
     if (state.clicked === false) {
       // If menu is closed and we want to open it.
@@ -35,7 +39,7 @@ const Hamburger = ({ state,cities }) => {
       gsap.to([reveal1, reveal2], {
         duration: 0,
         opacity: 1,
-        height: "100%"
+        height: "100%",
       });
       staggerReveal(reveal1, reveal2);
       fadeInUp(info);
@@ -43,43 +47,52 @@ const Hamburger = ({ state,cities }) => {
   }, [state]);
 
   return (
-    <div ref={el => (menuLayer = el)} className='hamburger-menu'>
+    <div ref={(el) => (menuLayer = el)} className='hamburger-menu'>
       <div
-        ref={el => (reveal1 = el)}
-        className='menu-secondary-background-color'></div>
-      <div ref={el => (reveal2 = el)} className='menu-layer'>
+        ref={(el) => (reveal1 = el)}
+        className='menu-secondary-background-color'
+      ></div>
+      <div ref={(el) => (reveal2 = el)} className='menu-layer'>
         <div
-          ref={el => (cityBackground = el)}
-          className='menu-city-background'></div>
+          ref={(el) => (cityBackground = el)}
+          className='menu-city-background'
+        ></div>
         <div className='container'>
           <div className='wrapper'>
             <div className='menu-links'>
-              <nav >
+              <nav>
                 <ul>
-                {locations.map((el,index) => (
+                  {locations.map((el, index) => (
                     <li key={index}>
-                    <Link
-                    onClick={()=>{window.scrollTo(0,0)}}
-                      to={`${el.value}`}>
-                   <span
-                    key={el.name}
-                    onMouseEnter={() => handleCity(el.coverImage, cityBackground)}
-                    onMouseOut={() => handleCityReturn(cityBackground)}>
-                    {el.name}
-                  </span>
-                    </Link>
-                  </li>
-                ))}
+                      <Link
+                        onClick={() => {
+                          window.scrollTo(0, 0);
+                          if (el.value === "ontheroad") {
+                            setLightMode();
+                          } else {
+                            setDarkMode();
+                          }
+                        }}
+                        to={`${el.value}`}
+                      >
+                        <span
+                          key={el.name}
+                          onMouseEnter={() =>
+                            handleCity(el.coverImage, cityBackground)
+                          }
+                          onMouseOut={() => handleCityReturn(cityBackground)}
+                        >
+                          {el.name}
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </nav>
-              <div ref={el => (info = el)} className='info'>
-                <h3>About</h3>
-                <p>
-                  An wanderer, a traveler, a rootless passenger. Walking, sitting, moving.
-                </p>
-                <p>hexiao0225@gmail.com</p>
+              <div ref={(el) => (info = el)} className='info'>
+                <h3>On the Road</h3>
+                {parseText(about)}
               </div>
-
             </div>
           </div>
         </div>

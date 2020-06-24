@@ -7,11 +7,7 @@ import ThreeImagesInRowGallery from "./ThreeImagesInRowGallery";
 import BlockQuote from "./BlockQuote";
 import Spacer from "./Spacer";
 
-const sampleText =
-  "Algeria is a fascinating country with an impressive size on the map. It is the largest African country, the largest country in the Mediterranean basin, and the largest country in the Arab world. \n 2.382 million km2 of land to explore: a traveler’s dream. Not very open to tourism and relatively unknown, Algeria is shrouded in mystery. It is a three-faced country that operates at three speeds. Turned towards the Mediterranean, the North is urban, modern and dynamic. The deeper we go inland and into the mountains (Kabylia, the land of the Chaoui…), the more the populations are rural and live according to traditional lifestyles… then comes the vast desert, which represents a door to another world.";
-
-const sampleQuote = "We believe our blog will have a strong influence.";
-const sampleAuthor = "Amal Jodwani";
+const nyny = '"if you make it there you can make it anywhere"';
 
 const NewYork = ({ content }) => {
   const {
@@ -26,20 +22,19 @@ const NewYork = ({ content }) => {
   return (
     <div className='country-page'>
       <Introduction titleSize={"large"} url={coverImage} title={title} />
-      <ImageWithText text={sampleText} image={map} />
+      <ImageWithText image={map} />
+      <BlockQuote author={"New York, New York"} quote={nyny} />
       <FullbleedImageWithText
         image={sectionCoverImages[0]}
-        text={sampleText}
-        title={"New York"}
+        title={"Coffee"}
       />
       <EightImagesGallery
         portraitUrls={eightImages.slice(0, 4)}
         landscapeUrls={eightImages.slice(4, 8)}
       />
-      <Introduction titleSize={"small"} url={sectionCoverImages[2]} title={"Jane's Carousel"} />
-      <BlockQuote author={sampleAuthor} quote={sampleQuote} />
+      <FullbleedImageWithText image={sectionCoverImages[1]} />
       <ThreeImagesInRowGallery images={threeImages} />
-      <Spacer size={"lg"} />
+      <div className="footer"> </div>
     </div>
   );
 };
