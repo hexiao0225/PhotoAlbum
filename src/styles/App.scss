@@ -73,12 +73,12 @@ body {
     margin: 7px;
     @media #{$tablet} {
       font-size: 60px;
-      margin: 7px;
+      margin: 10px;
     }
 
     @media #{$mobile} {
-      font-size: 40px;
-      margin: 7px;
+      font-size: 25px;
+      margin: 10px;
     }
   }
 }
@@ -880,7 +880,7 @@ header {
           justify-content: space-between;
           align-items: center;
           position: relative;
-          margin-left: 10vw;
+          margin-left: 20vw;
           top: 15vh;
           nav {
             display: block;
