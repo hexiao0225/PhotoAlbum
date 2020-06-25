@@ -278,7 +278,7 @@ body {
 .paragraph {
   font-family: "DINPro Light", sans-serif;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 1rem;
   line-height: 19px;
   opacity: 0;
   @media #{$desktop} {
@@ -926,7 +926,7 @@ header {
               margin-bottom: 1em;
               font-family: "DINPro Light", sans-serif;
               font-weight: 300;
-              font-size: 0.8em;
+              font-size: 1rem;
             }
 
             @media #{$mobile} {

@@ -14,7 +14,7 @@ import {
 const about1 =
   "A chain of threaded footprints \n A linear residue of the transitory, \n the fleeting, \n the contingent. "
 const about2= "A tangible past \n in muted ballad \n whispering formless lyrics."
-const about3 = "A collage of light and dark \n capturing corners, glimpses, \n and the immovable,\n the eternal memory"
+const about3 = "A collage of light and dark \n capturing corners, glimpses, \n and the immovable,\n the eternal."
 
 const Hamburger = ({ state, cities, setLightMode, setDarkMode }) => {
   let menuLayer = useRef(null);
