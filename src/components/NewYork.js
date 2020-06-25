@@ -5,9 +5,7 @@ import FullbleedImageWithText from "./FullbleedImageWithText";
 import EightImagesGallery from "./EightImagesGallery";
 import ThreeImagesInRowGallery from "./ThreeImagesInRowGallery";
 import BlockQuote from "./BlockQuote";
-import Spacer from "./Spacer";
 
-const nyny = '"if you make it there you can make it anywhere"';
 
 const NewYork = ({ content }) => {
   const {
@@ -17,13 +15,14 @@ const NewYork = ({ content }) => {
     eightImages,
     threeImages,
     sectionCoverImages,
+    quote1
   } = content;
 
   return (
     <div className='country-page'>
       <Introduction titleSize={"large"} url={coverImage} title={title} />
       <ImageWithText image={map} />
-      <BlockQuote author={"New York, New York"} quote={nyny} />
+      <BlockQuote author={"New York, New York"} quote={quote1} />
       <FullbleedImageWithText
         image={sectionCoverImages[0]}
         title={"Coffee"}

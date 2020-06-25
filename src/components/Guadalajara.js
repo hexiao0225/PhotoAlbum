@@ -4,13 +4,8 @@ import ImageWithText from "./ImageWithText";
 import FullbleedImageWithText from "./FullbleedImageWithText";
 import EightImagesGallery from "./EightImagesGallery";
 import ThreeImagesInRowGallery from "./ThreeImagesInRowGallery";
-import BlockQuote from "./BlockQuote";
-import Spacer from "./Spacer";
 import { parseText } from "../util/helper";
-import Paragraph from "./Paragraph";
-const coffeeshop = "Gestures no longer work, when it comes to describing fruity flavors. A young woman helped me to translate the order to Spanish. \n - \n You speak really good English. \n I lived in LA before. \n Are you from Guadalajara? \n Yes. "
-const lagunablanca = "At Cafe P’al Real \n Girl who works at the Cafe and I \n - \n I’m from Mexico City. I have lived here for 8 years. \n Is there any good pottery shop nearby? \n Lagunablanca. By the way do you like vintage clothing? \n Yes !  \n I recommend this store. \n [Typing Bravo Vintage 2 on my phone] \n This sweater is from them. \n [Pointing to her knit pattern sweater] "
-const museum = "The museum is inside a 19 century colonial era architecture, \n preserving indigenous handcrafts of Jalisco. \n The red paint on the wall reminds me of Orhan Pamuk’s My Name is Red."
+
 const Guadalajara = ({ content }) => {
   const {
     title,
@@ -19,6 +14,9 @@ const Guadalajara = ({ content }) => {
     eightImages,
     threeImages,
     sectionCoverImages,
+    p1,
+    p2,
+    p3
   } = content;
   return (
     <div className='country-page'>
@@ -26,7 +24,7 @@ const Guadalajara = ({ content }) => {
       <ImageWithText image={map} />
       <FullbleedImageWithText
         image={sectionCoverImages[0]}
-        text={parseText(lagunablanca)}
+        text={p1}
         title={"Lagunablanca"}
       />
       <EightImagesGallery
@@ -35,12 +33,13 @@ const Guadalajara = ({ content }) => {
       />
       <FullbleedImageWithText
         image={sectionCoverImages[2]}
-        text={parseText(coffeeshop)}
+        title={"Fruity Soda"}
+        text={p2}
       />
       <FullbleedImageWithText
         image={sectionCoverImages[1]}
         title={"Ceramics"}
-        text={parseText(museum)}
+        text={p3}
       />
       <ThreeImagesInRowGallery images={threeImages} />
       <div className="footer"> </div>

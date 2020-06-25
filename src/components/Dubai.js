@@ -5,12 +5,7 @@ import FullbleedImageWithText from "./FullbleedImageWithText";
 import EightImagesGallery from "./EightImagesGallery";
 import ThreeImagesInRowGallery from "./ThreeImagesInRowGallery";
 import BlockQuote from "./BlockQuote";
-import Spacer from "./Spacer";
 import { parseText } from "../util/helper";
-
-const overview ="Dubai is a fascinating city in the United Arab Emirates - luxurious, full of man wonders, truly internationalized, modern and dynamic. Yet a 45-minute drive can take you to the deep inland desert of wildlife and rural lifestyle, into another world. "
-const almaha = "Al Maha \n Camel \n Desert dinner \n Sand \n A man with South African accent \n A girl from Jiangxi, China \n Two Japanese couples"
-const quote = "A contemporary one thousand and one nights";
 
 const Dubai = ({ content }) => {
   const {
@@ -21,15 +16,18 @@ const Dubai = ({ content }) => {
     eightImages,
     threeImages,
     sectionCoverImages,
+    p1,
+    p2,
+    quote1
   } = content;
 
   return (
     <div className='country-page'>
       <Introduction titleSize={"large"} url={coverImage} title={title} />
-      <ImageWithText text={overview} image={map} />
+      <ImageWithText text={p1} image={map} />
       <FullbleedImageWithText
         image={horizontalImages[0]}
-        text={parseText(almaha)}
+        text={p2}
         title={"Fragments"}
       />
       <EightImagesGallery
@@ -39,8 +37,8 @@ const Dubai = ({ content }) => {
       <FullbleedImageWithText image={sectionCoverImages[0]} title={"Al Maha"}/>
       <ThreeImagesInRowGallery images={threeImages} />
       <FullbleedImageWithText image={horizontalImages[1]} />
-      <BlockQuote quote={quote} />
-      <Spacer size={"lg"} />
+      <BlockQuote quote={quote1} />
+      <div className="footer"> </div>
     </div>
   );
 };

@@ -21,6 +21,12 @@ const parseRawData = (items) => {
       eightimages,
       threeimages,
       sectioncoverimages,
+      p1,
+      p2,
+      p3,
+      p4,
+      quote1,
+      quote2
     } = city;
 
     return {
@@ -31,6 +37,12 @@ const parseRawData = (items) => {
       eightImages: eightimages.rawData.value.map((image) => image.url) || [],
       threeImages: threeimages.rawData.value.map((image) => image.url) || [],
       sectionCoverImages:sectioncoverimages.rawData.value.map((image) => image.url) || [],
+      p1:p1.value,
+      p2:p2.value,
+      p3:p3.value,
+      p4:p4.value,
+      quote1:quote1.value,
+      quote2:quote2.value
     };
   });
 
@@ -63,6 +75,12 @@ const App = () => {
         "eightimages",
         "threeimages",
         "sectioncoverimages",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "quote1",
+        "quote2"
       ])
       .toObservable()
       .subscribe((response) => {

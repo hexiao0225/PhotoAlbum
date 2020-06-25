@@ -12,7 +12,6 @@ const Menu = () => {
           <span></span>
         </div>
       </div>
-      <div className='menu-text'>Discover</div>
       <SocialMedia />
       <Logo />
     </div>

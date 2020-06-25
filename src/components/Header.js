@@ -5,7 +5,6 @@ import SocialMedia from "./SocialMedia";
 import Logo from "./Logo";
 
 const Header = ({ history, content }) => {
-  // State of our Menu
   const [state, setState] = useState({
     initial: false,
     clicked: null,
@@ -21,19 +20,14 @@ const Header = ({ history, content }) => {
   });
   const isInHomePage =
     window.location.hash.includes("road") || window.location.hash === "#/";
-  // State of our button
   const [disabled, setDisabled] = useState(false);
-  // State of header color
   const [lightMode, setLightMode] = useState(isInHomePage);
-  //Use Effect
   useEffect(() => {
-    //Listening for page changes.
     history.listen(() => {
       setState({ clicked: false, menuName: "menu" });
     });
   }, [history]);
 
-  // Toggle menu
   const handleMenu = () => {
     disableMenu();
     setLightMode(true);
@@ -61,7 +55,6 @@ const Header = ({ history, content }) => {
     }
   };
 
-  //Determine if out menu button should be disabled
   const disableMenu = () => {
     setDisabled(!disabled);
     setTimeout(() => {

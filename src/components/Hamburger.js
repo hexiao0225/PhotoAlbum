@@ -11,8 +11,11 @@ import {
   staggerRevealClose,
 } from "./Animations";
 
-const about =
-  "A chain of threaded footprints \n A linear residue of the transitory, \n the fleeting, \n the contingent memory. \n A tangible past \n in muted ballad \n whispering formless lyrics \n A collage of light and dark \n capturing corners, glimpses, \n and the immovable,\n the eternal memory.";
+const about1 =
+  "A chain of threaded footprints \n A linear residue of the transitory, \n the fleeting, \n the contingent. "
+const about2= "A tangible past \n in muted ballad \n whispering formless lyrics."
+const about3 = "A collage of light and dark \n capturing corners, glimpses, \n and the immovable,\n the eternal memory"
+
 const Hamburger = ({ state, cities, setLightMode, setDarkMode }) => {
   let menuLayer = useRef(null);
   let reveal1 = useRef(null);
@@ -91,7 +94,9 @@ const Hamburger = ({ state, cities, setLightMode, setDarkMode }) => {
               </nav>
               <div ref={(el) => (info = el)} className='info'>
                 <h3>On the Road</h3>
-                {parseText(about)}
+                <p>{parseText(about1)}</p>
+                <p>{parseText(about2)}</p>
+                <p>{parseText(about3)}</p>
               </div>
             </div>
           </div>
