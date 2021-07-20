@@ -38,12 +38,10 @@ const SantaFe = ({ content }) => {
         quote={quote1} />
       <ThreeImagesInRowGallery images={threeImages} />
       <FullbleedImageWithText
-        image={""}
         text={p3}
         title={"Two Songs"}
       />
       <FullbleedImageWithText
-        image={""}
         text={p4}
       />
       <div className="footer"> </div>
